@@ -1,5 +1,16 @@
+- [그래프 탐색 알고리즘](#그래프-탐색-알고리즘)
+- [DFS(Depth-First Search): 깊이 우선 탐색](#dfsdepth-first-search-깊이-우선-탐색)
+- [BFS(Breadth-First Search): 너비 우선 탐색](#bfsbreadth-first-search-너비-우선-탐색)
+- [문제1: 타켓넘버](#문제1-타켓넘버)
+- [문제2: 게임 맵 최단거리](#문제2-게임-맵-최단거리)
+
+#
+
+
 **⭐⭐⭐⭐ deque** </br>
 **⭐⭐⭐ 스택/큐**
+
+#
 
 
 # **그래프 탐색 알고리즘**
@@ -126,7 +137,7 @@ def solution(numbers, target):
     return answer
 ```
 
-deque를 사용한 문제.
+**deque를 사용한 문제.**
 
 # 문제2: 게임 맵 최단거리
 ![](https://velog.velcdn.com/images/miracle-21/post/d5514d2d-a84b-475c-817a-449e4d166de4/image.png)
@@ -198,10 +209,10 @@ def solution(maps):
     # 맵 도착지점이 1인 경우는 아예 도착하지 못한 것이므로 -1을 return 한다.
     return maps[-1][-1] if maps[-1][-1] > 1 else -1
     ```
-
+**deque를 사용한 문제.**
 
 
 ---
-[참고사이트]
+<알고리즘 이론 출처>
 
 https://freedeveloper.tistory.com/
