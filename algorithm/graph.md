@@ -213,6 +213,6 @@ def solution(maps):
 
 
 ---
-<알고리즘 이론 출처>
+<이론 출처>
 
 https://freedeveloper.tistory.com/
