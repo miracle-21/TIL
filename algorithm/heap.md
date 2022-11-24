@@ -3,9 +3,7 @@
 - [문제1. 더 맵게](#문제1-더-맵게)
 
 #
-
 **⭐⭐⭐ import heapq**
-
 #
 
 # 힙 정렬
@@ -29,8 +27,7 @@
     
 
 # 문제1. 더 맵게
-
-![스크린샷, 2022-11-24 12-33-35.png](%E1%84%92%E1%85%B5%E1%86%B8%20f1cf4555f43b497aa1e28e057b5b9f17/%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_2022-11-24_12-33-35.png)
+![](https://velog.velcdn.com/images/miracle-21/post/b23daca3-7db1-46f0-83ea-1dcb64e2a474/image.png)
 
 ```jsx
 import heapq
