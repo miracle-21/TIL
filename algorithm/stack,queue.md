@@ -61,7 +61,7 @@ print(queue) # 나중에 들어온 원소부터 출력
 ```
 
 # 문제1: 올바른 괄호
-
+![](https://velog.velcdn.com/images/miracle-21/post/7274c304-f831-4411-ac11-19743adf9997/image.png)
 ```python
 def solution(s):
     x = 0
@@ -80,7 +80,7 @@ def solution(s):
 어찌보면 **append(+)와 pop(-)을 번갈아가며 쓰는 문제.**
 
 # 문제2: 같은 숫자는 싫어
-
+![](https://velog.velcdn.com/images/miracle-21/post/1b39053d-5d4e-484c-b678-a6b8d66a50a0/image.png)
 
 ```python
 def solution(arr):
@@ -96,7 +96,7 @@ def solution(arr):
 **append를 사용한 문제.**
 
 # 문제3: 기능개발
-
+![](https://velog.velcdn.com/images/miracle-21/post/c4fa7377-a482-4b49-ac44-0a92ac777736/image.png)
 
 ```python
 #나의 풀이. 속도가 느리다.
@@ -150,7 +150,7 @@ def solution(progresses, speeds):
 **append와 pop을 쓰는 문제.** 센스가 중요한 문제같다.
 
 # 문제4: 프린터
-
+![](https://velog.velcdn.com/images/miracle-21/post/3767438e-5e2a-4d27-bf3b-4d9514284105/image.png)
 ```python
 #deque 모듈 사용
 from collections import deque
@@ -199,7 +199,7 @@ def solution(priorities, location):
 **append, pop, 또는 deque를 쓰는 문제.**
 
 # 문제5: 다리를 지나는 트럭
-
+![](https://velog.velcdn.com/images/miracle-21/post/5d1be811-2619-4fe1-84a6-efc90ab989da/image.png)
 ```python
 def solution(bridge_length, weight, truck_weights):
     time = 0
@@ -260,8 +260,8 @@ break
 **append와 pop을 쓰는 문제.** 센스가 중요한 문제같다.
 
 # 문제6. 주식가격
-
-```jsx
+![](https://velog.velcdn.com/images/miracle-21/post/f054bf57-1bdb-4124-93fb-028120a85a2c/image.png)
+```py
 from collections import deque
 
 def solution(prices):
@@ -282,6 +282,41 @@ def solution(prices):
 
 **deque를 이용한 문제.**
 
+# 문제7. 두 큐 합 같게 만들기
+![](https://velog.velcdn.com/images/miracle-21/post/04d90af2-77d7-43e3-98fa-f83c00e5ecfa/image.png)
+
+```py
+from collections import deque
+
+def solution(queue1, queue2):
+    q1 = deque(queue1)
+    q2 = deque(queue2)
+    sum1 = sum(q1)
+    sum2 = sum(q2)
+    avr = (sum1+sum2)/2
+    result = 0
+    while sum1 != sum2 != avr:
+        if len(q1) == 0 or len(q2) == 0 or result > 3000000:
+            return -1
+        elif sum1 > sum2:
+            a = q1.popleft()
+            q2.append(a)
+            sum1 -= a
+            sum2 += a
+            result += 1
+        elif sum1 < sum2:
+            a = q2.popleft()
+            q1.append(a)
+            sum2 -= a
+            sum1 += a
+            result += 1
+    return result
+```
+처음에는 if문 마다 q1과 q2의 합 중 큰값을 구하는 식으로 했는데 시간초과가 나서 `sum1`, `sum2` 변수를 따로 만들었다.
+
+그래도 11번, 28번에서 시간초과가 나서 질문하기를 보니 무한루프가 돌 수 있다고 해서, 30만번을 초과하면 -1이 리턴되도록 수정하니 통과했다.
+
+**deque를 이용한 문제.**
 
 ---
 <이론 출처>
